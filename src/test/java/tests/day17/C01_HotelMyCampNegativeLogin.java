@@ -1,7 +1,6 @@
 package tests.day17;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.github.javafaker.Hobbit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
@@ -9,27 +8,27 @@ import utilities.Driver;
 
 public class C01_HotelMyCampNegativeLogin {
 
-
     @Test
-    public void test01(){
-        //HotelMycamp adresine git.
-        Driver.getDriver().get("https://www.hotelmycamp.com/");
+    public void negatifLoginTesti(){
+        //hotelmycamp e gidelim.
+        Driver.getDriver().get("https://www.hotelmycamp.com");
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
-        hotelMyCampPage.guvenligiGec1.click();
-        hotelMyCampPage.guvenligiGec2.click();
+        hotelMyCampPage.gelismisSekmesiElementi.click();
+        hotelMyCampPage.siteyeilerleSekmesiElementi.click();
 
-        //Login click.
+        //logine baslaım
         hotelMyCampPage.ilkLoginLinki.click();
 
-        // username: manager1
-        hotelMyCampPage.userNameBox.sendKeys("manager1");
+        //username : manager1
+        hotelMyCampPage.usernameBox.sendKeys("manager1");
 
-        //password: manager1
-        hotelMyCampPage.passwordBox.sendKeys("manager1");
-        hotelMyCampPage.LoginButonu.click();
+        //password : manager1!
+        hotelMyCampPage.passwordBox.sendKeys("manager1!");
 
-        //Değerleri girildiğinde sayfaya girilmediğini test et
-        Assert.assertTrue(hotelMyCampPage.girisYapilamadiElementi.isDisplayed());
+        //değerler girildiğinde sayfaya girilmediğini test edelim.
+        hotelMyCampPage.loginLinki.click();
+        Assert.assertTrue(hotelMyCampPage.basarisizGiris.isDisplayed());
+
         Driver.closeDriver();
     }
 }

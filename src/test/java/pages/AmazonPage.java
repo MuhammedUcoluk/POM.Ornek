@@ -6,9 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class AmazonPage {
-    //Bir page classı açtığımızda ilk yapmamız gerekn şey
-    //parametresiz bir constructor oluşturup
-    //Bu constructor içinde PageFactory ile driver a ilk değer atamasını yapmaktır.
+    //Bir page classı açtığımızda ilk yapmamız gereken şey parametresiz bir cosntructur oluşturup
+    //Bu constructur içinde pagefactory ile driver a ilk değer atamasını yapmak olmalıdır.
 
     public AmazonPage(){
         PageFactory.initElements(Driver.getDriver(),this);

@@ -10,25 +10,21 @@ public class C03_FacebookLogin {
 
 
     @Test
-    public void test01() throws InterruptedException {
-        //facebook a gidin.
-        Driver.getDriver().get("https://facebook.com");
+    public void test01(){
+        //facebooka gidin.
+        Driver.getDriver().get("https://www.facebook.com");
 
-        //POM a uygun olarak email şifre kutularını ve giriş yap butonunu locate edin.
-        //====****LOCATE İŞLEMLERİNİ PAGES DA YAPTIK****====
-
-        //Faker class ını kullanarak email ve şifre değerlerini yazdırıp giriş butonuna basın
-        FacebookPage facebookPage=new FacebookPage();
+        //Poma uygun olarak email şifre kutularını ve giriş yap butonunu locate edin.
+        //Faker classını kullanarak email ve şifre değerlerini yazdırıp giriş butonuna basın.
         Faker faker=new Faker();
+        FacebookPage facebookPage=new FacebookPage();
         facebookPage.emailKutusu.sendKeys(faker.internet().emailAddress());
         facebookPage.passKutusu.sendKeys(faker.internet().password());
         facebookPage.loginButonu.click();
 
-        //Başarılı giriş yapılmadığını test edin.
+        //başarılı giriş yapıldığını test edin.
         Assert.assertTrue(facebookPage.girilemediYazisiElementi.isDisplayed());
 
-
-        Thread.sleep(5000);
         Driver.closeDriver();
     }
 }

@@ -11,18 +11,16 @@ public class FacebookPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(name="email")
+    @FindBy (name ="email")
     public WebElement emailKutusu;
 
-    @FindBy(id="pass")
+    @FindBy(id ="pass")
     public WebElement passKutusu;
 
     @FindBy(name="login")
     public WebElement loginButonu;
 
-    @FindBy(className="_9ay7")
+    @FindBy(className = "_9ay7")
     public WebElement girilemediYazisiElementi;
 
-
 }
-
