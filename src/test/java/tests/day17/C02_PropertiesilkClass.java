@@ -1,12 +1,11 @@
 package tests.day17;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C01_PropertiesilkClass {
+public class C02_PropertiesilkClass {
 
     @Test
     public void positiveLoginTest() throws InterruptedException {

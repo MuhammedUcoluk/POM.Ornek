@@ -26,7 +26,8 @@ public class C02_PageİlkClass {
         Driver.closeDriver();
 
     }
-    @Test public void test02(){
+    @Test
+    public void test02(){
         //amazona gidelim
         Driver.getDriver().get("https://www.amazon.com");
         //java için arama yapalım

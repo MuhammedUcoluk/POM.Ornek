@@ -10,7 +10,7 @@ import utilities.Driver;
 
 public class C04_HotelMyCampPositiveLogin {
 
-    @Test
+    @Test(groups = {"miniRegression", "smoke"})
     public void pozitifLogin() throws InterruptedException {
 
         //https://hotelmycamp.com/ adresine gidin.

@@ -68,6 +68,7 @@ public class C02_WebTables {
         System.out.println("4. satır : "+ satirlarWebElementListesi.get(3).getText());
 
 
+        Driver.closeDriver();
 
     }
 

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="tum package">
+    <test name="tüm testler">
+        <packages>
+            <package name=".*">
+                <!-- burada .* yazdık ve tüm packageleri sırasıyla çalıştırdı-->
+            </package>
+        </packages>
+    </test>
+</suite>
